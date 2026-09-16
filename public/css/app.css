@@ -1,0 +1,36 @@
+:root {
+    --brand-color: #2563eb;
+}
+
+body {
+    background-color: #f8f9fb;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.navbar-brand {
+    letter-spacing: -0.5px;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.admin-sidebar .nav-link.active {
+    background-color: var(--brand-color);
+    color: #fff !important;
+}
+
+.admin-sidebar .nav-link {
+    border-radius: 8px;
+}
+
+.table thead th {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #6b7280;
+}
+
+.badge {
+    font-weight: 500;
+}
