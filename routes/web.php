@@ -42,10 +42,11 @@ Route::post('/admin/logout', [AdminLoginController::class, 'destroy'])->name('ad
 Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-    // Hanya index, store, update, destroy — form tambah/edit/detail
-    // sekarang berupa modal di halaman index, jadi tidak perlu route
-    // create/edit/show terpisah lagi.
     Route::resource('inventaris', AdminInventarisController::class)
-        ->only(['index', 'store', 'update', 'destroy'])
+        ->except(['show'])
         ->parameters(['inventaris' => 'inventaris']);
+
+    // Detail barang di sisi admin (dipisah agar tidak konflik nama route dengan public)
+    Route::get('/inventaris/{inventaris}', [AdminInventarisController::class, 'show'])
+        ->name('inventaris.show');
 });

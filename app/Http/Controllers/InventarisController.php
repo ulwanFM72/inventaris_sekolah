@@ -3,39 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inventaris;
-use Illuminate\Http\Request;
 
 class InventarisController extends Controller
 {
     /**
-     * Menampilkan daftar inventaris untuk pengunjung umum.
-     * Mendukung search (nama barang), filter (jenis barang), dan pagination.
+     * Menampilkan halaman daftar inventaris untuk pengunjung umum.
+     * Pencarian, filter jenis, dan pagination kini ditangani langsung oleh
+     * komponen Livewire <livewire:inventaris-search /> di dalam view ini,
+     * jadi controller hanya perlu me-render halamannya saja.
      */
-    public function index(Request $request)
+    public function index()
     {
-        $keyword = $request->query('q');
-        $jenis = $request->query('jenis');
-
-        $inventaris = Inventaris::query()
-            ->search($keyword)
-            ->jenis($jenis)
-            ->orderBy('nama_barang')
-            ->paginate(10)
-            ->withQueryString();
-
-        // Daftar jenis barang unik untuk dropdown filter.
-        $daftarJenis = Inventaris::query()
-            ->select('jenis_barang')
-            ->distinct()
-            ->orderBy('jenis_barang')
-            ->pluck('jenis_barang');
-
-        return view('public.inventaris.index', [
-            'inventaris' => $inventaris,
-            'daftarJenis' => $daftarJenis,
-            'keyword' => $keyword,
-            'jenisTerpilih' => $jenis,
-        ]);
+        return view('public.inventaris.index');
     }
 
     /**

@@ -22,7 +22,7 @@ class InventarisController extends Controller
             ->search($keyword)
             ->jenis($jenis)
             ->latest()
-            ->paginate(10)
+            ->paginate(20)
             ->withQueryString();
 
         $daftarJenis = Inventaris::query()

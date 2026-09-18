@@ -1,10 +1,5 @@
 @php
-    // $barang: null saat mode tambah, instance Inventaris saat mode edit.
-    // $formId: string unik supaya id elemen (datalist) tidak duplikat
-    //          ketika partial ini dipakai berkali-kali di satu halaman
-    //          (1x untuk modal Tambah, Nx untuk modal Edit per baris).
     $barang = $barang ?? null;
-    $formId = $formId ?? 'create';
 @endphp
 
 <div class="mb-3">
@@ -18,10 +13,10 @@
 
 <div class="mb-3">
     <label class="form-label">Jenis Barang</label>
-    <input type="text" name="jenis_barang" list="daftarJenisBarang-{{ $formId }}"
+    <input type="text" name="jenis_barang" list="daftarJenisBarang"
            class="form-control @error('jenis_barang') is-invalid @enderror"
            value="{{ old('jenis_barang', $barang->jenis_barang ?? '') }}" required>
-    <datalist id="daftarJenisBarang-{{ $formId }}">
+    <datalist id="daftarJenisBarang">
         <option value="Elektronik">
         <option value="Furnitur">
         <option value="Alat Tulis Kantor">
@@ -56,7 +51,7 @@
     @enderror
 </div>
 
-<div class="mb-1">
+<div class="mb-4">
     <label class="form-label">Jumlah</label>
     <input type="number" name="jumlah" min="1" class="form-control @error('jumlah') is-invalid @enderror"
            value="{{ old('jumlah', $barang->jumlah ?? '') }}" required>
@@ -64,3 +59,6 @@
         <div class="invalid-feedback">{{ $message }}</div>
     @enderror
 </div>
+
+<button type="submit" class="btn btn-primary">Simpan</button>
+<a href="{{ route('admin.inventaris.index') }}" class="btn btn-outline-secondary">Batal</a>
