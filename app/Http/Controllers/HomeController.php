@@ -10,7 +10,7 @@ class HomeController extends Controller
     {
         $totalBarang = Inventaris::count();
         $totalJenis = Inventaris::distinct('jenis_barang')->count('jenis_barang');
-        $barangTerbaru = Inventaris::latest()->take(6)->get();
+        $barangTerbaru = Inventaris::latest()->take(12)->get();
 
         return view('public.home', compact('totalBarang', 'totalJenis', 'barangTerbaru'));
     }

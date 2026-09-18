@@ -7,13 +7,13 @@
                     type="text"
                     wire:model.live.debounce.400ms="search"
                     class="form-control"
-                    placeholder="Ketik nama barang... (hasil muncul otomatis)"
+                    placeholder="Ketik nama barang..."
                 >
             </div>
         </div>
         <div class="col-md-4">
             <select wire:model.live="jenis" class="form-select">
-                <option value="">-- Semua Jenis Barang --</option>
+                <option value="">Semua Jenis Barang</option>
                 @foreach ($daftarJenis as $j)
                     <option value="{{ $j }}">{{ $j }}</option>
                 @endforeach
@@ -23,8 +23,7 @@
             <button
                 type="button"
                 wire:click="$set('search', ''); $set('jenis', '')"
-                class="btn btn-outline-secondary w-100"
-            >
+                class="btn btn-outline-secondary w-100">
                 Reset
             </button>
         </div>

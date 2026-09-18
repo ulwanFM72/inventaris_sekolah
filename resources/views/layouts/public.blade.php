@@ -12,9 +12,12 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="{{ route('home') }}">
-                🏫 Inventaris Sekolah
-            </a>
+            <div class="navbar-brand fw-bold text-primary d-flex align-items-center">
+            <img src="{{ asset('images/logoremovebg.png') }}"
+                alt="Logo Inventaris Sekolah"
+                style="height: 80px; width: auto; margin-right: 5px;">
+                <span class="Judul-navbar">Inventaris SMK Negeri 1 Cijati</span>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -54,7 +57,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title fw-bold">🏫 Login Admin</h5>
+                    <h5 class="modal-title fw-bold">Login Admin</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">

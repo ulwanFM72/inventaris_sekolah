@@ -14,7 +14,7 @@ class DashboardController extends Controller
         $barangKondisiBaik = Inventaris::where('kualitas', 'Baik')->count();
         $barangRusak = Inventaris::whereIn('kualitas', ['Rusak Ringan', 'Rusak Berat'])->count();
 
-        $inventarisTerbaru = Inventaris::latest()->take(8)->get();
+        $inventarisTerbaru = Inventaris::latest()->take(20)->get();
 
         return view('admin.dashboard', compact(
             'totalBarang',

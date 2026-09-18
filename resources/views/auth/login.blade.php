@@ -11,7 +11,7 @@
 
     <div class="card shadow-sm border-0" style="width: 100%; max-width: 400px;">
         <div class="card-body p-4">
-            <h4 class="fw-bold text-center mb-1">🏫 Login Admin</h4>
+            <h4 class="fw-bold text-center mb-1">Login Admin</h4>
             <p class="text-muted text-center small mb-4">Sistem Inventaris Sekolah</p>
 
             @if ($errors->any())

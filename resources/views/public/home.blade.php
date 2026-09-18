@@ -2,6 +2,8 @@
 
 @section('title', 'Beranda - Inventaris Sekolah')
 
+<link rel="icon" type="image/png" href="{{ asset('images/logoremovebg.png') }}">
+
 @section('content')
     <div class="p-5 mb-4 bg-primary text-white rounded-3 shadow-sm">
         <h1 class="display-6 fw-bold">Sistem Informasi Inventaris Sekolah</h1>
