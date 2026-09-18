@@ -6,7 +6,7 @@
     <h3 class="fw-bold mb-4">Dashboard</h3>
 
     <div class="row g-3 mb-4">
-        <div class="col-md-3">
+        <div class="col-6 col-md-3">
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
                     <h6 class="text-muted small">Total Barang</h6>
@@ -14,7 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-6 col-md-3">
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
                     <h6 class="text-muted small">Total Jenis Barang</h6>
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-6 col-md-3">
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
                     <h6 class="text-muted small">Barang Kondisi Baik</h6>
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-6 col-md-3">
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
                     <h6 class="text-muted small">Barang Rusak</h6>
@@ -41,7 +41,7 @@
     </div>
 
     <div class="card border-0 shadow-sm">
-        <div class="card-header bg-white fw-semibold d-flex justify-content-between align-items-center">
+        <div class="card-header bg-white fw-semibold d-flex flex-wrap gap-2 justify-content-between align-items-center">
             Inventaris Terbaru
             <a href="{{ route('admin.inventaris.index') }}" class="btn btn-sm btn-primary">Lihat Semua</a>
         </div>

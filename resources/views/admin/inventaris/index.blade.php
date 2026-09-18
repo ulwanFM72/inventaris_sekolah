@@ -3,7 +3,7 @@
 @section('title', 'Data Inventaris')
 
 @section('content')
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4">
         <h3 class="fw-bold mb-0">Data Inventaris</h3>
         <a href="{{ route('admin.inventaris.create') }}" class="btn btn-primary">+ Tambah Barang</a>
     </div>
@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-4">
             <select name="jenis" class="form-select">
-                <option value="">Semua Jenis Barang</option>
+                <option value="">-- Semua Jenis Barang --</option>
                 @foreach ($daftarJenis as $jenis)
                     <option value="{{ $jenis }}" @selected($jenisTerpilih === $jenis)>{{ $jenis }}</option>
                 @endforeach

@@ -7,13 +7,13 @@
                     type="text"
                     wire:model.live.debounce.400ms="search"
                     class="form-control"
-                    placeholder="Ketik nama barang..."
+                    placeholder="Ketik nama barang... (hasil muncul otomatis)"
                 >
             </div>
         </div>
         <div class="col-md-4">
             <select wire:model.live="jenis" class="form-select">
-                <option value="">Semua Jenis Barang</option>
+                <option value="">-- Semua Jenis Barang --</option>
                 @foreach ($daftarJenis as $j)
                     <option value="{{ $j }}">{{ $j }}</option>
                 @endforeach
@@ -23,7 +23,8 @@
             <button
                 type="button"
                 wire:click="$set('search', ''); $set('jenis', '')"
-                class="btn btn-outline-secondary w-100">
+                class="btn btn-outline-secondary w-100"
+            >
                 Reset
             </button>
         </div>
@@ -79,7 +80,7 @@
          Livewire berbasis Tailwind, yang tidak dipakai di project ini. --}}
     @if ($inventaris->hasPages())
         <nav class="mt-3">
-            <ul class="pagination justify-content-center mb-0">
+            <ul class="pagination justify-content-center flex-wrap mb-0">
                 <li class="page-item {{ $inventaris->onFirstPage() ? 'disabled' : '' }}">
                     <button type="button" class="page-link" wire:click="previousPage" @disabled($inventaris->onFirstPage())>
                         &laquo;

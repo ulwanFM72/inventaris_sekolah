@@ -20,7 +20,7 @@
 
     <div class="row g-3">
         @forelse ($inventaris as $barang)
-            <div class="col-md-3">
+            <div class="col-6 col-md-4 col-lg-3">
                 <div class="card border-0 shadow-sm h-100">
                     @if ($barang->fotoUrl())
                         <img src="{{ $barang->fotoUrl() }}" class="card-img-top" style="height: 160px; object-fit: cover;" alt="{{ $barang->nama_barang }}">
