@@ -15,7 +15,7 @@
             <div class="navbar-brand fw-bold text-primary d-flex align-items-center">
             <img src="{{ asset('images/logoremovebg.png') }}"
                 alt="Logo Inventaris Sekolah"
-                style="height: 80px; width: auto; margin-right: 5px;">
+                style="height: 75px; width: auto; margin-right: 5px;">
                 <span class="Judul-navbar">Inventaris SMK Negeri 1 Cijati</span>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FotoBarangController;
 use App\Http\Controllers\Admin\InventarisController as AdminInventarisController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\HomeController;
@@ -49,4 +50,11 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
     // Detail barang di sisi admin (dipisah agar tidak konflik nama route dengan public)
     Route::get('/inventaris/{inventaris}', [AdminInventarisController::class, 'show'])
         ->name('inventaris.show');
+
+    // Halaman terpisah untuk kelola foto barang, tetap terhubung ke data
+    // Inventaris yang sama lewat route model binding {inventaris}.
+    Route::get('/foto', [FotoBarangController::class, 'index'])->name('foto.index');
+    Route::get('/foto/{inventaris}/edit', [FotoBarangController::class, 'edit'])->name('foto.edit');
+    Route::put('/foto/{inventaris}', [FotoBarangController::class, 'update'])->name('foto.update');
+    Route::delete('/foto/{inventaris}', [FotoBarangController::class, 'destroy'])->name('foto.destroy');
 });

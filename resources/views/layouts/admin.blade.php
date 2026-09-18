@@ -9,6 +9,19 @@
 </head>
 <body>
 
+<nav class="navbar navbar-dark bg-dark px-3 shadow-sm">
+    <span class="navbar-brand mb-0 h5">🏫 Admin - Inventaris Sekolah</span>
+    <div class="d-flex align-items-center gap-3">
+        <span class="text-white-50 small d-none d-md-inline">
+            {{ auth()->user()->name ?? '' }}
+        </span>
+        <form action="{{ route('admin.logout') }}" method="POST" class="m-0">
+            @csrf
+            <button type="submit" class="btn btn-sm btn-outline-light">Logout</button>
+        </form>
+    </div>
+</nav>
+
 <div class="d-flex">
     <aside class="admin-sidebar bg-white border-end p-3" style="width: 240px; min-height: calc(100vh - 56px);">
         <ul class="nav nav-pills flex-column gap-1">
@@ -23,8 +36,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="{{ route('admin.inventaris.index', ['tambah' => 1]) }}">
+                <a class="nav-link {{ request()->routeIs('admin.inventaris.create') ? 'active' : 'text-dark' }}" href="{{ route('admin.inventaris.create') }}">
                     ➕ Tambah Barang
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('admin.foto.*') ? 'active' : 'text-dark' }}" href="{{ route('admin.foto.index') }}">
+                    🖼️ Foto Barang
                 </a>
             </li>
             <li class="nav-item mt-3 border-top pt-2">

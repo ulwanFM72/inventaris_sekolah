@@ -65,6 +65,18 @@ class Inventaris extends Model
     }
 
     /**
+     * URL publik foto barang, atau null jika belum ada foto.
+     * Kolom `foto` TIDAK dimasukkan ke $fillable secara sengaja — foto
+     * hanya diubah lewat FotoBarangController (set properti langsung +
+     * save()), supaya tidak bisa "menyusup" lewat form tambah/edit data
+     * inventaris biasa.
+     */
+    public function fotoUrl(): ?string
+    {
+        return $this->foto ? \Illuminate\Support\Facades\Storage::url($this->foto) : null;
+    }
+
+    /**
      * Badge warna Bootstrap untuk setiap kondisi kualitas.
      * Dipakai di view supaya logic tampilan tidak diulang di banyak Blade file.
      */

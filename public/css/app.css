@@ -40,5 +40,15 @@ body {
 }
 
 .Judul-navbar {
-    font-size: 30px;
+    font-size: 20px;
+}
+
+.nav-item {
+    font-size: 18px;
+    font-weight: bold;
+    font-family:
+        "Segoe UI",
+        system-ui,
+        -apple-system,
+        sans-serif;
 }
