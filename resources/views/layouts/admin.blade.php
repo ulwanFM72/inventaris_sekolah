@@ -9,26 +9,6 @@
 </head>
 <body>
 
-<nav class="navbar navbar-dark bg-dark px-3 shadow-sm">
-    <div class="d-flex align-items-center gap-2">
-        {{-- Tombol menu, hanya tampil di layar kecil/menengah (di bawah breakpoint lg) --}}
-        <button class="btn btn-outline-light btn-sm d-lg-none" type="button"
-                data-bs-toggle="offcanvas" data-bs-target="#adminSidebar" aria-controls="adminSidebar">
-            ☰
-        </button>
-        <span class="navbar-brand mb-0 h6 h-md-5 mb-0">🏫 <span class="d-none d-sm-inline">Admin - Inventaris Sekolah</span><span class="d-inline d-sm-none">Admin</span></span>
-    </div>
-    <div class="d-flex align-items-center gap-2 gap-md-3">
-        <span class="text-white-50 small d-none d-md-inline">
-            {{ auth()->user()->name ?? '' }}
-        </span>
-        <form action="{{ route('admin.logout') }}" method="POST" class="m-0">
-            @csrf
-            <button type="submit" class="btn btn-sm btn-outline-light">Logout</button>
-        </form>
-    </div>
-</nav>
-
 <div class="d-flex">
     {{--
         offcanvas-lg: di bawah breakpoint lg (<992px, mencakup HP & tablet)

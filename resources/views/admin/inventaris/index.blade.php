@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-4">
             <select name="jenis" class="form-select">
-                <option value="">-- Semua Jenis Barang --</option>
+                <option value="">Semua Jenis Barang</option>
                 @foreach ($daftarJenis as $jenis)
                     <option value="{{ $jenis }}" @selected($jenisTerpilih === $jenis)>{{ $jenis }}</option>
                 @endforeach
