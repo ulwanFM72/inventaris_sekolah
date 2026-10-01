@@ -8,7 +8,7 @@
     <div class="card shadow-sm border-0">
         <div class="card-body">
             <h4 class="fw-bold">{{ $inventaris->nama_barang }}</h4>
-            <span class="badge bg-{{ $inventaris->kualitasBadgeColor() }} mb-3">{{ $inventaris->kualitas }}</span>
+            <span class="badge bg-{{ $inventaris->kualitasBadgeColor() }} mb-3">{{ $inventaris->kualitas }}</span>.
 
             <table class="table table-borderless w-auto">
                 <tr>

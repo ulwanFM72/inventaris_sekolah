@@ -38,7 +38,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>.
 
     <main class="flex-grow-1">
         <div class="container py-4">
