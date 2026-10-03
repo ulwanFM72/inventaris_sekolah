@@ -38,7 +38,7 @@
                 </ul>
             </div>
         </div>
-    </nav>.
+    </nav>
 
     <main class="flex-grow-1">
         <div class="container py-4">
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>.
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

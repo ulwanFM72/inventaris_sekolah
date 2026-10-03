@@ -9,7 +9,7 @@
     @error('nama_barang')
         <div class="invalid-feedback">{{ $message }}</div>
     @enderror
-</div>
+</div>.
 
 <div class="mb-3">
     <label class="form-label">Jenis Barang</label>

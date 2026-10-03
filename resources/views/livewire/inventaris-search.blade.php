@@ -27,7 +27,7 @@
             >
                 Reset
             </button>
-        </div>
+        </div>.
     </div>
 
     <div class="card shadow-sm border-0 position-relative">
