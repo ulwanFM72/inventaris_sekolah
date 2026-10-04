@@ -26,7 +26,7 @@
                 <tr>
                     <th class="text-muted">Dicatat pada</th>
                     <td>: {{ $inventaris->created_at->format('d F Y H:i') }}</td>
-                </tr>
+                </tr>.
             </table>
 
             <a href="{{ route('admin.inventaris.edit', $inventaris) }}" class="btn btn-warning">Edit Barang Ini</a>
