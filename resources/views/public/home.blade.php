@@ -28,7 +28,7 @@
                     <p class="display-6 fw-bold text-success mb-0">{{ $totalJenis }}</p>
                 </div>
             </div>
-        </div>.
+        </div>
     </div>
 
     <h5 class="mb-3">Barang Terbaru Tercatat</h5>
