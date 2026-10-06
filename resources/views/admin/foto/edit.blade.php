@@ -5,7 +5,7 @@
 @section('content')
     <a href="{{ route('admin.foto.index') }}" class="btn btn-sm btn-outline-secondary mb-3">&larr; Kembali</a>
 
-    <h3 class="fw-bold mb-4">Foto Barang: {{ $inventaris->nama_barang }}</h3>
+    <h3 class="fw-bold mb-4">Foto Barang: {{ $inventaris->nama_barang }}</h3>.
 
     <div class="row g-4">
         <div class="col-md-5">
