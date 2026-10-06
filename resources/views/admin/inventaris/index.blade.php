@@ -6,7 +6,7 @@
     <div class="d-flex flex-wrap gap-2 justify-content-between align-items-center mb-4">
         <h3 class="fw-bold mb-0">Data Inventaris</h3>
         <a href="{{ route('admin.inventaris.create') }}" class="btn btn-primary">+ Tambah Barang</a>
-    </div>
+    </div>.
 
     <form method="GET" action="{{ route('admin.inventaris.index') }}" class="row g-2 mb-3">
         <div class="col-md-6">
