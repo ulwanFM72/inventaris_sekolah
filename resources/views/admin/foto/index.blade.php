@@ -7,7 +7,7 @@
     <p class="text-muted mb-4">
         Kelola foto untuk setiap barang inventaris. Foto yang diunggah di sini
         akan muncul di halaman detail barang pada sisi publik.
-    </p>.
+    </p>
 
     <form method="GET" action="{{ route('admin.foto.index') }}" class="row g-2 mb-4">
         <div class="col-md-6">

@@ -32,7 +32,6 @@
 
     <div class="card shadow-sm border-0 position-relative">
 
-        {{-- Indikator loading kecil saat request Livewire berjalan --}}
         <div wire:loading class="position-absolute top-0 end-0 m-2">
             <span class="badge bg-primary">Memuat...</span>
         </div>
@@ -75,9 +74,6 @@
         </div>
     </div>
 
-    {{-- Pagination bergaya Bootstrap, memakai method bawaan WithPagination
-         (gotoPage, previousPage, nextPage) karena view pagination default
-         Livewire berbasis Tailwind, yang tidak dipakai di project ini. --}}
     @if ($inventaris->hasPages())
         <nav class="mt-3">
             <ul class="pagination justify-content-center flex-wrap mb-0">
@@ -103,4 +99,4 @@
             </ul>
         </nav>
     @endif
-</div>.
+</div>

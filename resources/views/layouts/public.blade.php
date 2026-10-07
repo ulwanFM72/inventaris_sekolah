@@ -93,12 +93,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    {{--
-        Buka otomatis modal Login jika:
-        - pengunjung datang dari link/redirect yang menyertakan ?login=1
-          (misalnya diarahkan oleh middleware karena mencoba akses /admin tanpa login), atau
-        - percobaan login sebelumnya gagal (ada error validasi pada field 'email').
-    --}}
     @if (request()->boolean('login') || $errors->has('email'))
         <script>
             document.addEventListener('DOMContentLoaded', function () {

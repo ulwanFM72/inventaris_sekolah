@@ -13,6 +13,6 @@
                 @php($barang = $inventaris)
                 @include('admin.inventaris._form')
             </form>
-        </div>.
+        </div>
     </div>
 @endsection

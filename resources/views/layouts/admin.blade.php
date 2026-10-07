@@ -10,12 +10,6 @@
 <body>
 
 <div class="d-flex">
-    {{--
-        offcanvas-lg: di bawah breakpoint lg (<992px, mencakup HP & tablet)
-        elemen ini berperilaku sebagai offcanvas (tersembunyi, muncul lewat
-        tombol ☰ di navbar). Pada layar lg ke atas (desktop/laptop), otomatis
-        berubah jadi sidebar statis biasa yang selalu terlihat.
-    --}}
     <aside class="admin-sidebar offcanvas-lg offcanvas-start bg-white border-end"
            tabindex="-1" id="adminSidebar" aria-labelledby="adminSidebarLabel"
            style="width: 240px; min-height: calc(100vh - 56px);">
