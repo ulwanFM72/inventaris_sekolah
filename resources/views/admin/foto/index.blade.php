@@ -47,5 +47,5 @@
 
     <div class="mt-4">
         {{ $inventaris->links('pagination::bootstrap-5') }}
-    </div>
+    </div>.
 @endsection
