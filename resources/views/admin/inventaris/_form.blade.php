@@ -58,7 +58,7 @@
     @error('jumlah')
         <div class="invalid-feedback">{{ $message }}</div>
     @enderror
-</div>.
+</div>
 
 <button type="submit" class="btn btn-primary">Simpan</button>
 <a href="{{ route('admin.inventaris.index') }}" class="btn btn-outline-secondary">Batal</a>
