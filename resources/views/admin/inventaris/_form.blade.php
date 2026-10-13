@@ -61,4 +61,4 @@
 </div>
 
 <button type="submit" class="btn btn-primary">Simpan</button>
-<a href="{{ route('admin.inventaris.index') }}" class="btn btn-outline-secondary">Batal</a>
+<a href="{{ route('admin.inventaris.index') }}" class="btn btn-outline-secondary">Batal</a>.
