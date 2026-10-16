@@ -106,4 +106,4 @@
 
     @livewireScripts
 </body>
-</html>.
+</html>
