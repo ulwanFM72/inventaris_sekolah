@@ -31,5 +31,5 @@
 
             <a href="{{ route('admin.inventaris.edit', $inventaris) }}" class="btn btn-warning">Edit Barang Ini</a>
         </div>
-    </div>.
+    </div>
 @endsection

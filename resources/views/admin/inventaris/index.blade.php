@@ -91,5 +91,5 @@
 
     <div class="mt-3">
         {{ $inventaris->links('pagination::bootstrap-5') }}
-    </div>.
+    </div>
 @endsection
